@@ -1,13 +1,9 @@
 package com.examly.springapp.repository;
 
+import com.examly.springapp.model.StockEntry;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
 @Repository
-public class StockEntryRepo {
-    @Id
-    private String stock;
+public interface StockEntryRepo extends JpaRepository<StockEntry, Long> {
 }
